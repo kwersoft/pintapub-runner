@@ -5,7 +5,7 @@ RUN set -eux ;                 \
     apt-get update -yqq &&     \
     apt-get install gnupg -yqq
 RUN set -eux ; \
-    curl -sL https://deb.nodesource.com/setup_8.x | bash -
+    https://deb.nodesource.com/setup_10.x | bash -
 RUN set -eux ;                               \
     apt-get install -yqq git                 \
                          nodejs              \
@@ -38,5 +38,3 @@ RUN set -eux ;                               \
                          rsync
 RUN set -eux ; \
     docker-php-ext-install curl json intl gd xml bz2 opcache pdo pdo_pgsql
-RUN set -eux ;                                          \
-    curl -sS https://getcomposer.org/installer | php
