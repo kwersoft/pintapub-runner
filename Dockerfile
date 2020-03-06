@@ -38,3 +38,16 @@ RUN set -eux ;                               \
                          rsync
 RUN set -eux ; \
     docker-php-ext-install curl json intl gd xml bz2 opcache pdo pdo_pgsql
+    
+# Install composer
+RUN curl -sS https://getcomposer.org/installer | php -- \
+        --filename=composer \
+        --install-dir=/usr/local/bin && \
+        echo "alias composer='composer'" >> /root/.bashrc && \
+        composer
+
+
+# Install phpunit
+RUN wget https://phar.phpunit.de/phpunit-6.0.phar && \
+        chmod +x phpunit-6.0.phar && \
+        mv phpunit-6.0.phar /usr/local/bin/phpunit
