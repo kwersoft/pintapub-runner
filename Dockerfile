@@ -46,8 +46,3 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
         echo "alias composer='composer'" >> /root/.bashrc && \
         composer
 
-
-# Install phpunit
-RUN wget https://phar.phpunit.de/phpunit-6.0.phar && \
-        chmod +x phpunit-6.0.phar && \
-        mv phpunit-6.0.phar /usr/local/bin/phpunit
