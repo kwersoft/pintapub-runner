@@ -1,4 +1,4 @@
-FROM php:7.2
+FROM php:7.4
 MAINTAINER Max Zamaliev <zamal@inbox.ru>
 
 RUN set -eux ;                 \
