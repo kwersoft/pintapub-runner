@@ -3,7 +3,7 @@ MAINTAINER Max Zamaliev <zamal@inbox.ru>
 
 RUN set -eux ;                 \
     apt-get update -yqq &&     \
-    apt-get install gnupg zip unzip php-zip -yqq
+    apt-get install gnupg -yqq
 RUN set -eux ; \
     https://deb.nodesource.com/setup_10.x | bash -
 RUN set -eux ;                               \
@@ -35,7 +35,10 @@ RUN set -eux ;                               \
                          libzip-dev          \
                          ssh                 \
                          openssh-client      \
-                         rsync
+                         rsync               \
+                         zip                 \
+                         unzip               \
+                         php-zip
 RUN set -eux ; \
     docker-php-ext-install curl json intl gd xml bz2 opcache pdo pdo_pgsql
     
