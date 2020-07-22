@@ -35,10 +35,7 @@ RUN set -eux ;                               \
                          libzip-dev          \
                          ssh                 \
                          openssh-client      \
-                         rsync               \
-                         zip                 \
-                         unzip               \
-                         php-zip
+                         rsync 
 RUN set -eux ; \
     docker-php-ext-install curl json intl gd xml bz2 opcache pdo pdo_pgsql
     
