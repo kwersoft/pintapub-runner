@@ -3,7 +3,7 @@ MAINTAINER Max Zamaliev <zamal@inbox.ru>
 
 RUN set -eux ;                 \
     apt-get update -yqq &&     \
-    apt-get install gnupg -yqq
+    apt-get install gnupg zip unzip php-zip -yqq
 RUN set -eux ; \
     https://deb.nodesource.com/setup_10.x | bash -
 RUN set -eux ;                               \
